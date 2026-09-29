@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Watch movies on Agasobanuye Fast."
+    >
+
+    <title>
+        Watch Movie | Agasobanuye Fast
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+                AF
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    Agasobanuye
+                </strong>
+
+                <span>
+                    FAST
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="desktop-nav">
+
+            <a
+                href="index.html"
+                class="nav-link"
+            >
+                Home
+            </a>
+
+            <a
+                href="index.html#categories"
+                class="nav-link"
+            >
+                Categories
+            </a>
+
+            <a
+                href="index.html#movies"
+                class="nav-link"
+            >
+                Movies
+            </a>
+
+            <a
+                href="admin.html"
+                class="nav-link admin-link"
+            >
+                Admin
+            </a>
+
+        </nav>
+
+
+        <!-- SEARCH -->
+
+        <div class="header-search">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search movies..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="searchButton"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            type="button"
+            id="menuButton"
+            class="menu-button"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="mobileMenu"
+        class="mobile-menu"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#categories">
+            Categories
+        </a>
+
+        <a href="index.html#movies">
+            Movies
+        </a>
+
+        <a href="admin.html">
+            Admin
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     WATCH PAGE
+     ===================================================== -->
+
+<main class="watch-page">
+
+    <div class="watch-container">
+
+
+        <!-- BACK BUTTON -->
+
+        <a
+            href="index.html"
+            class="back-link"
+        >
+            ← Back to Movies
+        </a>
+
+
+
+        <!-- =================================================
+             VIDEO PLAYER
+             ================================================= -->
+
+        <section class="watch-player-card">
+
+            <div class="video-container">
+
+                <video
+                    id="moviePlayer"
+                    controls
+                    preload="metadata"
+                    playsinline
+                >
+                    Your browser does not support
+                    HTML5 video.
+                </video>
+
+
+                <!--
+
+                    THIS IS THE BLUE TRIANGLE.
+
+                    Clicking it immediately starts
+                    the movie.
+
+                -->
+
+                <button
+                    id="centerPlayButton"
+                    class="center-play-button"
+                    type="button"
+                    aria-label="Play movie"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MOVIE INFORMATION
+             ================================================= -->
+
+        <section class="watch-info">
+
+            <div class="watch-title-row">
+
+                <div>
+
+                    <span class="section-kicker">
+                        NOW WATCHING
+                    </span>
+
+                    <h1 id="movieTitle">
+                        Loading movie...
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOVIE DETAILS -->
+
+            <div
+                id="movieDetails"
+                class="movie-details"
+            >
+
+                <span id="movieYear">
+                    Year
+                </span>
+
+                <span id="movieCategory">
+                    Category
+                </span>
+
+                <span id="movieLanguage">
+                    Language
+                </span>
+
+                <span id="movieViews">
+                    👁 0 views
+                </span>
+
+                <span id="movieDownloads">
+                    ⬇ 0 downloads
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 WATCH CONTROLS
+                 ================================================= -->
+
+            <div class="watch-buttons">
+
+                <button
+                    type="button"
+                    class="pause-button"
+                    id="pauseButton"
+                >
+                    ⏸ Pause
+                </button>
+
+
+                <button
+                    type="button"
+                    class="resume-button"
+                    id="resumeButton"
+                >
+                    ▶ Resume
+                </button>
+
+
+                <button
+                    type="button"
+                    id="downloadButton"
+                    class="download-button"
+                >
+                    ⬇ Download
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DESCRIPTION
+             ================================================= -->
+
+        <section class="info-box">
+
+            <div class="info-heading">
+
+                <span class="info-icon">
+                    📖
+                </span>
+
+                <h2>
+                    Description
+                </h2>
+
+            </div>
+
+
+            <p id="movieDescription">
+                Loading description...
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACTORS
+             ================================================= -->
+
+        <section class="info-box">
+
+            <div class="info-heading">
+
+                <span class="info-icon">
+                    🎭
+                </span>
+
+                <h2>
+                    Actors / Entertainers
+                </h2>
+
+            </div>
+
+
+            <p id="movieActors">
+                Loading actors...
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RELATED MOVIES
+             ================================================= -->
+
+        <section class="related-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-kicker">
+                        KEEP WATCHING
+                    </span>
+
+                    <h2>
+                        Related Movies
+                    </h2>
+
+                    <p>
+                        You may also like these movies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="relatedMovies"
+                class="movie-grid"
+            >
+
+                <div class="loading-state">
+
+                    <div class="loading-spinner"></div>
+
+                    <p>
+                        Loading related movies...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <div class="brand-logo">
+                AF
+            </div>
+
+            <div>
+
+                <strong>
+                    Agasobanuye Fast
+                </strong>
+
+                <p>
+                    Your movie destination.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="index.html#movies">
+                Movies
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-copy">
+
+            © 2026 Agasobanuye Fast
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     MAIN APP
+     ===================================================== -->
+
+<script src="app.js"></script>
+
+
+
+<!-- =====================================================
+     WATCH PAGE CONTROLS
+     ===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =================================================
+           GET ELEMENTS
+           ================================================= */
+
+        const player =
+            document.getElementById(
+                "moviePlayer"
+            );
+
+
+        const centerPlayButton =
+            document.getElementById(
+                "centerPlayButton"
+            );
+
+
+        const pauseButton =
+            document.getElementById(
+                "pauseButton"
+            );
+
+
+        const resumeButton =
+            document.getElementById(
+                "resumeButton"
+            );
+
+
+
+        /* =================================================
+           CENTER BLUE PLAY BUTTON
+           ================================================= */
+
+        if (
+            player &&
+            centerPlayButton
+        ) {
+
+
+            /*
+             * WHEN USER CLICKS THE BLUE TRIANGLE
+             *
+             * The movie starts immediately.
+             */
+
+            centerPlayButton.addEventListener(
+                "click",
+                async function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+
+                    try {
+
+                        await player.play();
+
+                    }
+
+                    catch (error) {
+
+                        console.error(
+                            "Unable to play movie:",
+                            error
+                        );
+
+                    }
+
+                }
+            );
+
+
+
+            /*
+             * MOVIE STARTED
+             *
+             * Hide the blue triangle.
+             */
+
+            player.addEventListener(
+                "play",
+                function () {
+
+                    centerPlayButton.classList.add(
+                        "hidden"
+                    );
+
+                }
+            );
+
+
+
+            /*
+             * MOVIE PAUSED
+             *
+             * Show the blue triangle again.
+             */
+
+            player.addEventListener(
+                "pause",
+                function () {
+
+                    centerPlayButton.classList.remove(
+                        "hidden"
+                    );
+
+                }
+            );
+
+
+
+            /*
+             * MOVIE FINISHED
+             *
+             * Show the blue triangle again.
+             */
+
+            player.addEventListener(
+                "ended",
+                function () {
+
+                    centerPlayButton.classList.remove(
+                        "hidden"
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =================================================
+           PAUSE BUTTON
+           ================================================= */
+
+        if (pauseButton) {
+
+            pauseButton.addEventListener(
+                "click",
+                function () {
+
+                    if (player) {
+
+                        player.pause();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =================================================
+           RESUME BUTTON
+           ================================================= */
+
+        if (resumeButton) {
+
+            resumeButton.addEventListener(
+                "click",
+                async function () {
+
+                    if (!player) {
+                        return;
+                    }
+
+
+                    try {
+
+                        await player.play();
+
+                    }
+
+                    catch (error) {
+
+                        console.error(
+                            "Unable to resume movie:",
+                            error
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =================================================
+           MOBILE MENU
+           ================================================= */
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+
+        const mobileMenu =
+            document.getElementById(
+                "mobileMenu"
+            );
+
+
+        if (
+            menuButton &&
+            mobileMenu
+        ) {
+
+            menuButton.addEventListener(
+                "click",
+                function () {
+
+                    mobileMenu.classList.toggle(
+                        "show"
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =================================================
+           CLOSE MOBILE MENU AFTER CLICK
+           ================================================= */
+
+        if (mobileMenu) {
+
+            const mobileLinks =
+                mobileMenu.querySelectorAll(
+                    "a"
+                );
+
+
+            mobileLinks.forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            mobileMenu.classList.remove(
+                                "show"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

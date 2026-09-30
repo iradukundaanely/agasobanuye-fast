@@ -6,7 +6,7 @@
    PUBLIC + WATCH + ADMIN
    ========================================================= */
 
-const API = "http://localhost:5000/api";
+const API = "https://agasobanuye-fast.onrender.com/api";
 const SERVER = "http://localhost:5000";
 
 
